@@ -441,6 +441,13 @@
   @keyframes marcas-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce) { .marcas-track { animation: none; } }
 
+  /* Thumbnail galleries (static, indexable) */
+  .thumb-grid { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .thumb { padding: 0; border: 1px solid var(--line); background: var(--surface); width: 84px; height: 84px; overflow: hidden; flex-shrink: 0; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.2s ease; }
+  .thumb:hover img { transform: scale(1.08); }
+  .thumb:hover, .thumb:focus-visible { border-color: var(--accent); }
+
   /* Outros cases */
   .outros-cases { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: clamp(2.5rem, 5vw, 3.5rem); }
   .outros-cases-inner { max-width: var(--measure); }
@@ -778,7 +785,20 @@
     </div>
     <div class="marcas-track-wrap">
       <div class="marcas-track" id="marcasTrack">
-        <p class="marcas-empty" id="marcasEmpty">Logos em breve</p>
+        <img src="assets/marcas/logo-strahl.png" alt="Strahl" loading="lazy" />
+        <img src="assets/marcas/logo-ipatre.png" alt="IPATRE" loading="lazy" />
+        <img src="assets/marcas/logo-ouviden.png" alt="Ouviden" loading="lazy" />
+        <img src="assets/marcas/logo-lfm-construtora.png" alt="LFM Construtora" loading="lazy" />
+        <img src="assets/marcas/logo-fibralata.png" alt="Fibralata" loading="lazy" />
+        <img src="assets/marcas/logo-life-support.png" alt="Life Support" loading="lazy" />
+        <img src="assets/marcas/logo-jardim-saira.png" alt="Jardim Saíra" loading="lazy" />
+        <img src="assets/marcas/logo-strahl.png" alt="" loading="lazy" aria-hidden="true" />
+        <img src="assets/marcas/logo-ipatre.png" alt="" loading="lazy" aria-hidden="true" />
+        <img src="assets/marcas/logo-ouviden.png" alt="" loading="lazy" aria-hidden="true" />
+        <img src="assets/marcas/logo-lfm-construtora.png" alt="" loading="lazy" aria-hidden="true" />
+        <img src="assets/marcas/logo-fibralata.png" alt="" loading="lazy" aria-hidden="true" />
+        <img src="assets/marcas/logo-life-support.png" alt="" loading="lazy" aria-hidden="true" />
+        <img src="assets/marcas/logo-jardim-saira.png" alt="" loading="lazy" aria-hidden="true" />
       </div>
     </div>
   </section>
@@ -833,7 +853,6 @@
             <a class="mini-btn" href="https://www.strahl.com/" target="_blank" rel="noopener">Site institucional ↗</a>
             <a class="mini-btn" href="https://loja.strahl.com/" target="_blank" rel="noopener">Loja e-commerce ↗</a>
             <a class="mini-btn" href="https://www.youtube.com/watch?v=CR4F2qmypTc&list=PLcaFCdlIzSXrYR4g7v_FIuX_DpPSORrCv" target="_blank" rel="noopener">Canal StrahlConecta no YouTube ↗</a>
-            <button class="mini-btn" type="button" data-gallery="assets/cases/strahl/" data-gallery-label="Portfólio do case Strahl, materiais elétricos industriais">Portfólio</button>
           </div>
         </div>
         <div class="case-body">
@@ -849,6 +868,16 @@
             <li>Gestão de marketing</li>
             <li>Criação do canal <strong>StrahlConecta</strong>: planejamento completo, roteiro de cada episódio, participação como âncora e entrevistador, edição do material final e publicação em LinkedIn, Instagram e blog da marca</li>
           </ul>
+          <h4>Portfólio</h4>
+          <div class="thumb-grid" data-gallery="strahl">
+            <button class="thumb" type="button" data-index="0"><img src="assets/cases/strahl/strahl-catalogo-tecnico.jpg" alt="Catálogo técnico de produtos Strahl" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="1"><img src="assets/cases/strahl/strahl-anuncio-pagina-dupla.jpg" alt="Anúncio Strahl, página dupla" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="2"><img src="assets/cases/strahl/strahl-anuncio-pagina-simples.jpg" alt="Anúncio Strahl, página simples" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="3"><img src="assets/cases/strahl/strahl-anuncio-cekton.jpg" alt="Anúncio da linha Cekton, Strahl" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="4"><img src="assets/cases/strahl/strahl-post-40-anos.jpg" alt="Post da campanha de 40 anos da Strahl" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="5"><img src="assets/cases/strahl/strahl-display-mesa-40-anos.jpg" alt="Display de mesa da campanha de 40 anos da Strahl" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="6"><img src="assets/cases/strahl/strahl-post-dia-da-mulher.jpg" alt="Post do Dia da Mulher, Strahl" loading="lazy" /></button>
+          </div>
         </div>
       </div>
 
@@ -861,7 +890,6 @@
           <div class="case-links">
             <a class="mini-btn" href="https://loja.ipatre.com.br/" target="_blank" rel="noopener">Loja e-commerce ↗</a>
             <a class="mini-btn" href="https://www.ipatre.com.br/" target="_blank" rel="noopener">Site institucional ↗</a>
-            <button class="mini-btn" type="button" data-gallery="assets/cases/ipatre/" data-gallery-label="Portfólio do case IPATRE, educação em saúde">Portfólio</button>
           </div>
         </div>
         <div class="case-body">
@@ -876,6 +904,16 @@
             <li>Landing pages</li>
             <li>Redes sociais</li>
           </ul>
+          <h4>Portfólio</h4>
+          <div class="thumb-grid" data-gallery="ipatre">
+            <button class="thumb" type="button" data-index="0"><img src="assets/cases/ipatre/ipatre-folder-frente.jpg" alt="Folder institucional do IPATRE, frente" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="1"><img src="assets/cases/ipatre/ipatre-folder-verso.jpg" alt="Folder institucional do IPATRE, verso" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="2"><img src="assets/cases/ipatre/ipatre-frota.jpg" alt="Frota de veículos do IPATRE" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="3"><img src="assets/cases/ipatre/ipatre-camiseta-15-anos.jpg" alt="Camiseta da campanha de 15 anos do IPATRE" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="4"><img src="assets/cases/ipatre/ipatre-post-15-anos.jpg" alt="Post da campanha de 15 anos do IPATRE" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="5"><img src="assets/cases/ipatre/ipatre-post-dia-das-maes.jpg" alt="Post do Dia das Mães, IPATRE" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="6"><img src="assets/cases/ipatre/ipatre-post-dia-dos-pais.jpg" alt="Post do Dia dos Pais, IPATRE" loading="lazy" /></button>
+          </div>
         </div>
       </div>
 
@@ -888,7 +926,6 @@
           <div class="case-links">
             <a class="mini-btn" href="https://www.instagram.com/ouviden/" target="_blank" rel="noopener">Instagram ↗</a>
             <a class="mini-btn" href="https://www.ouviden.com.br/" target="_blank" rel="noopener">Site institucional ↗</a>
-            <button class="mini-btn" type="button" data-gallery="assets/cases/ouviden/" data-gallery-label="Portfólio do case Ouviden, rede de lojas de aparelhos auditivos">Portfólio</button>
           </div>
         </div>
         <div class="case-body">
@@ -903,6 +940,21 @@
             <li>Redes sociais</li>
             <li>Edições de vídeos</li>
           </ul>
+          <h4>Portfólio</h4>
+          <div class="thumb-grid" data-gallery="ouviden">
+            <button class="thumb" type="button" data-index="0"><img src="assets/cases/ouviden/ouviden-folder.jpg" alt="Folder institucional da Ouviden" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="1"><img src="assets/cases/ouviden/ouviden-balcao-genesis.jpg" alt="Balcão de atendimento Genesis, loja Ouviden" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="2"><img src="assets/cases/ouviden/ouviden-loja-atibaia.jpg" alt="Loja Ouviden em Atibaia" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="3"><img src="assets/cases/ouviden/ouviden-sacola.jpg" alt="Sacola personalizada Ouviden" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="4"><img src="assets/cases/ouviden/ouviden-post-institucional.jpg" alt="Post institucional da Ouviden" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="5"><img src="assets/cases/ouviden/ouviden-post-dia-das-maes.jpg" alt="Post do Dia das Mães, Ouviden" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="6"><img src="assets/cases/ouviden/ouviden-post-dia-dos-pais.jpg" alt="Post do Dia dos Pais, Ouviden" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="7"><img src="assets/cases/ouviden/ouviden-campanha-mes-dos-pais.jpg" alt="Campanha do mês dos pais, Ouviden" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="8"><img src="assets/cases/ouviden/ouviden-campanha-copa-kit-equipe.jpg" alt="Kit de equipe da campanha de Copa do Mundo, Ouviden" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="9"><img src="assets/cases/ouviden/ouviden-flyer-omega.jpg" alt="Flyer da linha de aparelhos Omega, Ouviden" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="10"><img src="assets/cases/ouviden/ouviden-anuncio-gateball.jpg" alt="Anúncio de patrocínio ao gateball, Ouviden" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="11"><img src="assets/cases/ouviden/ouviden-anuncio-contracapa.jpg" alt="Anúncio de contracapa, Ouviden" loading="lazy" /></button>
+          </div>
         </div>
       </div>
 
@@ -911,7 +963,30 @@
           <span class="tag">Outros cases</span>
           <h3>Outros projetos realizados</h3>
           <p>Além dos três cases em destaque, outros projetos de marca, comunicação e identidade já foram conduzidos para clientes de diferentes setores.</p>
-          <button class="mini-btn" type="button" data-gallery="assets/cases/outros/" data-gallery-label="Portfólio de outros projetos de marca e comunicação">Ver portfólio</button>
+          <div class="thumb-grid" data-gallery="outros">
+            <button class="thumb" type="button" data-index="0"><img src="assets/cases/outros/outros-conceito-comunicacao.jpg" alt="Conceito de comunicação de marca" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="1"><img src="assets/cases/outros/outros-identidade-cartoes.jpg" alt="Identidade visual aplicada em cartões" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="2"><img src="assets/cases/outros/outros-catalogo-flexform.jpg" alt="Catálogo Flexform" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="3"><img src="assets/cases/outros/outros-pasta-flexform.jpg" alt="Pasta institucional Flexform" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="4"><img src="assets/cases/outros/outros-anuncio-flexform-2009.jpg" alt="Anúncio Flexform, 2009" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="5"><img src="assets/cases/outros/outros-catalogo-comolatti.jpg" alt="Catálogo Comolatti" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="6"><img src="assets/cases/outros/outros-campanha-comolatti-super-maquina.jpg" alt="Campanha Super Máquina, Comolatti" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="7"><img src="assets/cases/outros/outros-catalogo-corzus-2012.jpg" alt="Catálogo de produtos Corzus, 2012" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="8"><img src="assets/cases/outros/outros-embalagem-corzus.jpg" alt="Embalagem de produto Corzus" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="9"><img src="assets/cases/outros/outros-embalagem-almondega-frango.jpg" alt="Embalagem de almôndega de frango" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="10"><img src="assets/cases/outros/outros-embalagem-chicken-braslo.jpg" alt="Embalagem de frango Braslo" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="11"><img src="assets/cases/outros/outros-agua-saborizada-limao.jpg" alt="Embalagem de água saborizada sabor limão" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="12"><img src="assets/cases/outros/outros-agua-saborizada-rosa.jpg" alt="Embalagem de água saborizada sabor rosa" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="13"><img src="assets/cases/outros/outros-agua-saborizada-magnesio.jpg" alt="Embalagem de água saborizada com magnésio" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="14"><img src="assets/cases/outros/outros-agua-petroleo.jpg" alt="Embalagem de água, linha Petróleo" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="15"><img src="assets/cases/outros/outros-aquaprint.jpg" alt="Material gráfico Aquaprint" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="16"><img src="assets/cases/outros/outros-anuncio-carbinox.jpg" alt="Anúncio Carbinox" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="17"><img src="assets/cases/outros/outros-vestuario-fsa-2007-a.jpg" alt="Material de vestuário FSA, 2007" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="18"><img src="assets/cases/outros/outros-vestuario-fsa-2007-b.jpg" alt="Material de vestuário FSA, remanejamento, 2007" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="19"><img src="assets/cases/outros/outros-post-omega.jpg" alt="Post da marca Omega" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="20"><img src="assets/cases/outros/outros-logo-bateu-ganhou.jpg" alt="Logotipo Bateu Ganhou" loading="lazy" /></button>
+            <button class="thumb" type="button" data-index="21"><img src="assets/cases/outros/outros-material-corporativo-falcao.jpg" alt="Material corporativo Falcão" loading="lazy" /></button>
+          </div>
         </div>
       </div>
     </div>
@@ -1104,23 +1179,69 @@
 
 <script>
   (function () {
-    function probeImages(basePath, max, ext) {
-      ext = ext || 'jpg';
-      var indices = [];
-      for (var i = 1; i <= max; i++) indices.push(i);
-      return Promise.all(indices.map(function (i) {
-        var n = (i < 10 ? '0' : '') + i;
-        var src = basePath + n + '.' + ext;
-        return new Promise(function (resolve) {
-          var img = new Image();
-          img.onload = function () { resolve(src); };
-          img.onerror = function () { resolve(null); };
-          img.src = src;
-        });
-      })).then(function (results) { return results.filter(Boolean); });
-    }
+    /* Each gallery's full image list, in the same order as its visible thumbnails.
+       Keeping this list explicit (instead of guessing numbered filenames) lets every
+       file have a real, descriptive name and per-image alt text for search/AI indexing. */
+    var GALLERIES = {
+      strahl: [
+        { src: 'assets/cases/strahl/strahl-catalogo-tecnico.jpg', alt: 'Catálogo técnico de produtos Strahl' },
+        { src: 'assets/cases/strahl/strahl-anuncio-pagina-dupla.jpg', alt: 'Anúncio Strahl, página dupla' },
+        { src: 'assets/cases/strahl/strahl-anuncio-pagina-simples.jpg', alt: 'Anúncio Strahl, página simples' },
+        { src: 'assets/cases/strahl/strahl-anuncio-cekton.jpg', alt: 'Anúncio da linha Cekton, Strahl' },
+        { src: 'assets/cases/strahl/strahl-post-40-anos.jpg', alt: 'Post da campanha de 40 anos da Strahl' },
+        { src: 'assets/cases/strahl/strahl-display-mesa-40-anos.jpg', alt: 'Display de mesa da campanha de 40 anos da Strahl' },
+        { src: 'assets/cases/strahl/strahl-post-dia-da-mulher.jpg', alt: 'Post do Dia da Mulher, Strahl' }
+      ],
+      ipatre: [
+        { src: 'assets/cases/ipatre/ipatre-folder-frente.jpg', alt: 'Folder institucional do IPATRE, frente' },
+        { src: 'assets/cases/ipatre/ipatre-folder-verso.jpg', alt: 'Folder institucional do IPATRE, verso' },
+        { src: 'assets/cases/ipatre/ipatre-frota.jpg', alt: 'Frota de veículos do IPATRE' },
+        { src: 'assets/cases/ipatre/ipatre-camiseta-15-anos.jpg', alt: 'Camiseta da campanha de 15 anos do IPATRE' },
+        { src: 'assets/cases/ipatre/ipatre-post-15-anos.jpg', alt: 'Post da campanha de 15 anos do IPATRE' },
+        { src: 'assets/cases/ipatre/ipatre-post-dia-das-maes.jpg', alt: 'Post do Dia das Mães, IPATRE' },
+        { src: 'assets/cases/ipatre/ipatre-post-dia-dos-pais.jpg', alt: 'Post do Dia dos Pais, IPATRE' }
+      ],
+      ouviden: [
+        { src: 'assets/cases/ouviden/ouviden-folder.jpg', alt: 'Folder institucional da Ouviden' },
+        { src: 'assets/cases/ouviden/ouviden-balcao-genesis.jpg', alt: 'Balcão de atendimento Genesis, loja Ouviden' },
+        { src: 'assets/cases/ouviden/ouviden-loja-atibaia.jpg', alt: 'Loja Ouviden em Atibaia' },
+        { src: 'assets/cases/ouviden/ouviden-sacola.jpg', alt: 'Sacola personalizada Ouviden' },
+        { src: 'assets/cases/ouviden/ouviden-post-institucional.jpg', alt: 'Post institucional da Ouviden' },
+        { src: 'assets/cases/ouviden/ouviden-post-dia-das-maes.jpg', alt: 'Post do Dia das Mães, Ouviden' },
+        { src: 'assets/cases/ouviden/ouviden-post-dia-dos-pais.jpg', alt: 'Post do Dia dos Pais, Ouviden' },
+        { src: 'assets/cases/ouviden/ouviden-campanha-mes-dos-pais.jpg', alt: 'Campanha do mês dos pais, Ouviden' },
+        { src: 'assets/cases/ouviden/ouviden-campanha-copa-kit-equipe.jpg', alt: 'Kit de equipe da campanha de Copa do Mundo, Ouviden' },
+        { src: 'assets/cases/ouviden/ouviden-flyer-omega.jpg', alt: 'Flyer da linha de aparelhos Omega, Ouviden' },
+        { src: 'assets/cases/ouviden/ouviden-anuncio-gateball.jpg', alt: 'Anúncio de patrocínio ao gateball, Ouviden' },
+        { src: 'assets/cases/ouviden/ouviden-anuncio-contracapa.jpg', alt: 'Anúncio de contracapa, Ouviden' }
+      ],
+      outros: [
+        { src: 'assets/cases/outros/outros-conceito-comunicacao.jpg', alt: 'Conceito de comunicação de marca' },
+        { src: 'assets/cases/outros/outros-identidade-cartoes.jpg', alt: 'Identidade visual aplicada em cartões' },
+        { src: 'assets/cases/outros/outros-catalogo-flexform.jpg', alt: 'Catálogo Flexform' },
+        { src: 'assets/cases/outros/outros-pasta-flexform.jpg', alt: 'Pasta institucional Flexform' },
+        { src: 'assets/cases/outros/outros-anuncio-flexform-2009.jpg', alt: 'Anúncio Flexform, 2009' },
+        { src: 'assets/cases/outros/outros-catalogo-comolatti.jpg', alt: 'Catálogo Comolatti' },
+        { src: 'assets/cases/outros/outros-campanha-comolatti-super-maquina.jpg', alt: 'Campanha Super Máquina, Comolatti' },
+        { src: 'assets/cases/outros/outros-catalogo-corzus-2012.jpg', alt: 'Catálogo de produtos Corzus, 2012' },
+        { src: 'assets/cases/outros/outros-embalagem-corzus.jpg', alt: 'Embalagem de produto Corzus' },
+        { src: 'assets/cases/outros/outros-embalagem-almondega-frango.jpg', alt: 'Embalagem de almôndega de frango' },
+        { src: 'assets/cases/outros/outros-embalagem-chicken-braslo.jpg', alt: 'Embalagem de frango Braslo' },
+        { src: 'assets/cases/outros/outros-agua-saborizada-limao.jpg', alt: 'Embalagem de água saborizada sabor limão' },
+        { src: 'assets/cases/outros/outros-agua-saborizada-rosa.jpg', alt: 'Embalagem de água saborizada sabor rosa' },
+        { src: 'assets/cases/outros/outros-agua-saborizada-magnesio.jpg', alt: 'Embalagem de água saborizada com magnésio' },
+        { src: 'assets/cases/outros/outros-agua-petroleo.jpg', alt: 'Embalagem de água, linha Petróleo' },
+        { src: 'assets/cases/outros/outros-aquaprint.jpg', alt: 'Material gráfico Aquaprint' },
+        { src: 'assets/cases/outros/outros-anuncio-carbinox.jpg', alt: 'Anúncio Carbinox' },
+        { src: 'assets/cases/outros/outros-vestuario-fsa-2007-a.jpg', alt: 'Material de vestuário FSA, 2007' },
+        { src: 'assets/cases/outros/outros-vestuario-fsa-2007-b.jpg', alt: 'Material de vestuário FSA, remanejamento, 2007' },
+        { src: 'assets/cases/outros/outros-post-omega.jpg', alt: 'Post da marca Omega' },
+        { src: 'assets/cases/outros/outros-logo-bateu-ganhou.jpg', alt: 'Logotipo Bateu Ganhou' },
+        { src: 'assets/cases/outros/outros-material-corporativo-falcao.jpg', alt: 'Material corporativo Falcão' }
+      ]
+    };
 
-    /* ---- Lightbox gallery ---- */
+    /* ---- Lightbox (zoom view for the static thumbnails above) ---- */
     var lightbox = document.getElementById('lightbox');
     if (lightbox) {
       var lbImg = document.getElementById('lightboxImg');
@@ -1129,17 +1250,17 @@
       var lbPrev = document.getElementById('lightboxPrev');
       var lbNext = document.getElementById('lightboxNext');
       var lbClose = document.getElementById('lightboxClose');
-      var state = { images: [], index: 0, label: '' };
+      var state = { images: [], index: 0 };
 
       function showImage() {
-        lbImg.src = state.images[state.index];
-        lbImg.alt = state.label + ', imagem ' + (state.index + 1) + ' de ' + state.images.length;
+        var item = state.images[state.index];
+        lbImg.src = item.src;
+        lbImg.alt = item.alt;
         lbCount.textContent = (state.index + 1) + ' / ' + state.images.length;
       }
-      function openLightbox(images, label) {
+      function openLightbox(images, startIndex) {
         state.images = images;
-        state.index = 0;
-        state.label = label || 'Portfólio';
+        state.index = startIndex || 0;
         var hasImages = images.length > 0;
         lbImg.style.display = hasImages ? 'block' : 'none';
         lbPrev.style.display = hasImages ? 'flex' : 'none';
@@ -1164,32 +1285,23 @@
         if (e.key === 'ArrowLeft' && state.images.length) lbPrev.click();
         if (e.key === 'ArrowRight' && state.images.length) lbNext.click();
       });
-      document.querySelectorAll('[data-gallery]').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          var folder = btn.getAttribute('data-gallery');
-          var label = btn.getAttribute('data-gallery-label') || 'Portfólio';
-          probeImages(folder, 16, 'jpg').then(function (images) { openLightbox(images, label); });
+      document.querySelectorAll('.thumb-grid[data-gallery]').forEach(function (grid) {
+        var galleryName = grid.getAttribute('data-gallery');
+        var images = GALLERIES[galleryName] || [];
+        grid.querySelectorAll('.thumb').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var index = parseInt(btn.getAttribute('data-index'), 10) || 0;
+            openLightbox(images, index);
+          });
         });
       });
     }
 
-    /* ---- Logo marquee ---- */
+    /* ---- Logo marquee hover-pause (logos are now static <img> tags in the HTML) ---- */
     var track = document.getElementById('marcasTrack');
     if (track) {
-      probeImages('assets/marcas/', 16, 'png').then(function (logos) {
-        if (!logos.length) return;
-        var empty = document.getElementById('marcasEmpty');
-        if (empty) empty.remove();
-        logos.concat(logos).forEach(function (src) {
-          var img = document.createElement('img');
-          img.src = src;
-          img.alt = '';
-          img.loading = 'lazy';
-          track.appendChild(img);
-        });
-        track.addEventListener('mouseenter', function () { track.classList.add('paused'); });
-        track.addEventListener('mouseleave', function () { track.classList.remove('paused'); });
-      });
+      track.addEventListener('mouseenter', function () { track.classList.add('paused'); });
+      track.addEventListener('mouseleave', function () { track.classList.remove('paused'); });
     }
   })();
 </script>
